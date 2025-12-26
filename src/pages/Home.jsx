@@ -4,17 +4,19 @@ import Card from "../components/Card";
 import "../styles/header.scss";
 import "../styles/card.scss";
 import "../styles/footer.scss";
+import bannerHome from "../assets/img-banner-home.png";
 
 function Home() {
   return (
-    <div className="home">
-      <Banner />
+    <>
+      <Banner image={bannerHome} title="Chez vous, partout et ailleurs" />
+
       <div className="card-container">
         {logements.map((logement) => (
           <Card key={logement.id} logement={logement} />
         ))}
       </div>
-    </div>
+    </>
   );
 }
 

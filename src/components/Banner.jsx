@@ -1,11 +1,16 @@
 import "../styles/banner.scss";
-import bannerImage from "../assets/img-banner-home.png";
 
-function Banner() {
+function Banner({ image, title, overlayOpacity = 0.6 }) {
   return (
     <div className="banner">
-      <img src={bannerImage} alt="Bannière Kasa" />
-      <h1>Chez vous, partout et ailleurs</h1>
+      <img src={image} alt={title || "Bannière Kasa"} />
+
+      <div
+        className="banner__overlay"
+        style={{ backgroundColor: `rgba(0, 0, 0, ${overlayOpacity})` }}
+      ></div>
+
+      {title && <h1>{title}</h1>}
     </div>
   );
 }
