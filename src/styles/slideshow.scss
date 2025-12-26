@@ -1,0 +1,44 @@
+.slideshow {
+  position: relative;
+  max-width: 1240px;
+  margin: 0 auto;
+  overflow: hidden;
+
+  .slideshow-image {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: transform 0.5s ease-in-out;
+  }
+
+  .arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    border: none;
+    color: white;
+    background: transparent;
+    font-size: 6rem;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+
+    &.left {
+      left: 10px;
+    }
+    &.right {
+      right: 10px;
+    }
+  }
+
+  .counter {
+    position: absolute;
+    bottom: 10px;
+    right: 50%;
+    transform: translateX(50%);
+    color: white;
+    padding: 0.3rem 0.6rem;
+    border-radius: 10px;
+    font-size: 1.6rem;
+    font-weight: 600;
+  }
+}

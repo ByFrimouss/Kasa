@@ -5,6 +5,7 @@ import "../styles/header.scss";
 import "../styles/card.scss";
 import "../styles/footer.scss";
 import bannerHome from "../assets/img-banner-home.png";
+import { Link } from "react-router-dom";
 
 function Home() {
   return (
@@ -13,7 +14,9 @@ function Home() {
 
       <div className="card-container">
         {logements.map((logement) => (
-          <Card key={logement.id} logement={logement} />
+          <Link key={logement.id} to={`/logement/${logement.id}`}>
+            <Card logement={logement} />
+          </Link>
         ))}
       </div>
     </>
