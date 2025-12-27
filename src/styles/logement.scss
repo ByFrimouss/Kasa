@@ -1,0 +1,151 @@
+.logement {
+  max-width: 1240px;
+  margin: 0 auto;
+  padding: 0 20px;
+
+  /* =========================
+     HEADER
+  ========================= */
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+    gap: 20px;
+  }
+
+  &__infos {
+    flex: 1;
+  }
+
+  &__title {
+    color: #ff6060;
+    font-size: 36px;
+    font-weight: 500;
+    margin: 0;
+  }
+
+  &__location {
+    font-size: 18px;
+    margin-top: 8px;
+  }
+
+  /* =========================
+     TAGS
+  ========================= */
+  &__tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 20px;
+  }
+}
+
+.tag {
+  background-color: #ff6060;
+  color: white;
+  padding: 5px 20px;
+  border-radius: 10px;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+/* =========================
+   HOST + RATING
+========================= */
+.logement__host {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: space-between;
+}
+
+.host {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  &__name {
+    color: #ff6060;
+    font-size: 18px;
+    text-align: right;
+    max-width: 100px;
+  }
+
+  &__picture {
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+}
+
+/* =========================
+   RATING
+========================= */
+.rating {
+  display: flex;
+  gap: 5px;
+  margin-top: 15px;
+}
+
+.star {
+  font-size: 24px;
+  color: #e3e3e3;
+
+  &--active {
+    color: #ff6060;
+  }
+}
+
+/* =========================
+   COLLAPSES
+========================= */
+.logement__collapses {
+  display: flex;
+  gap: 40px;
+  margin-top: 30px;
+
+  > .collapse {
+    flex: 1;
+  }
+}
+
+.equipments {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+
+  li {
+    margin-bottom: 5px;
+  }
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+@media (max-width: 768px) {
+  .logement {
+    &__header {
+      flex-direction: column;
+    }
+
+    &__title {
+      font-size: 24px;
+    }
+  }
+
+  .logement__host {
+    flex-direction: row-reverse;
+    align-items: center;
+    margin-top: 20px;
+  }
+
+  .rating {
+    margin-top: 0;
+  }
+
+  .logement__collapses {
+    flex-direction: column;
+    gap: 20px;
+  }
+}

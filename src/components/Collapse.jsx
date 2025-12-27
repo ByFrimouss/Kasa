@@ -2,7 +2,7 @@ import { useState } from "react";
 import arrow from "../assets/arrow_haut.png";
 import "../styles/collapse.scss";
 
-function Collapse({ title, content }) {
+function Collapse({ title, children }) {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
@@ -16,9 +16,7 @@ function Collapse({ title, content }) {
         />
       </div>
 
-      <div className={`collapse-content ${isOpen ? "open" : ""}`}>
-        <p>{content}</p>
-      </div>
+      {isOpen && <div className="collapse-content">{children}</div>}
     </div>
   );
 }

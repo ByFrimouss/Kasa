@@ -29,7 +29,11 @@ function Slideshow({ images }) {
       )}
 
       <div className="slide">
-        <img src={images[current]} alt={`Slide ${current + 1}`} />
+        <img
+          src={images[current]}
+          alt={`Slide ${current + 1}`}
+          className="slideshow-image"
+        />
       </div>
 
       {length > 1 && (
