@@ -50,3 +50,26 @@
   margin: 0;
   font-size: 1rem;
 }
+
+/* Mobile : 320px → 767px */
+@media (max-width: 767px) {
+  .collapse-header h3 {
+    font-size: 0.8rem;
+  }
+
+  .collapse-content p {
+    font-size: 0.9rem;
+  }
+
+  .collapse-arrow {
+    width: 25px;
+  }
+
+  .collapse-content {
+    font-size: 0.7rem;
+  }
+
+  .collapse {
+    margin-bottom: 20px;
+  }
+}

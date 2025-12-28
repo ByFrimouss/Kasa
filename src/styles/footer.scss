@@ -17,3 +17,20 @@
     font-size: 1.2rem;
   }
 }
+
+/* Mobile : 375px → 767px */
+@media (max-width: 767px) {
+  .footer {
+    padding: 40px 20px;
+
+    &__logo {
+      width: 100px;
+    }
+
+    &__text {
+      font-size: 0.9rem;
+      max-width: 150px;
+      line-height: 1.3;
+    }
+  }
+}

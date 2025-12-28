@@ -7,7 +7,9 @@ $color-secondary: #ff6060;
 $color-link: #646cff;
 
 // Reset minimal
-* {
+*,
+*::before,
+*::after {
   box-sizing: border-box;
 }
 

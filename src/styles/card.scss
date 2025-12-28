@@ -43,3 +43,28 @@
     -webkit-backdrop-filter: blur(4px); // Safari
   }
 }
+
+/* Mobile : 320px → 767px */
+@media (max-width: 767px) {
+  .card-container {
+    grid-template-columns: 1fr;
+    padding: 20px 10px;
+    margin: 0;
+    gap: 20px;
+    background-color: transparent;
+  }
+
+  .card {
+    width: 100%;
+    height: auto;
+
+    img {
+      height: auto;
+    }
+
+    h2 {
+      font-size: 14px;
+      padding: 4px 8px;
+    }
+  }
+}

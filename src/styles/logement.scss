@@ -120,32 +120,68 @@
   }
 }
 
-/* =========================
-   RESPONSIVE
-========================= */
+/* Mobile : 320px → 767px */
 @media (max-width: 768px) {
   .logement {
     &__header {
       flex-direction: column;
+      margin-top: 15px;
     }
 
     &__title {
-      font-size: 24px;
+      font-size: 18px;
+    }
+
+    &__location {
+      font-size: 12px;
+      font-weight: 500;
+    }
+
+    &__tags {
+      margin-top: 0;
+    }
+
+    .tag {
+      padding: 5px 15px;
+      font-size: 8px;
+      font-weight: 600;
+      border-radius: 5px;
     }
   }
 
   .logement__host {
     flex-direction: row-reverse;
     align-items: center;
-    margin-top: 20px;
+  }
+
+  .host {
+    &__name {
+      font-size: 14px;
+    }
+
+    &__picture {
+      width: 36px;
+      height: 36px;
+    }
   }
 
   .rating {
     margin-top: 0;
+    gap: 0;
   }
 
   .logement__collapses {
     flex-direction: column;
-    gap: 20px;
+    gap: 0;
+    margin-top: 15px;
+  }
+
+  .collapse-header h3 {
+    font-size: 12px;
+  }
+
+  .collapse-arrow.open,
+  .collapse-arrow {
+    width: 20px;
   }
 }

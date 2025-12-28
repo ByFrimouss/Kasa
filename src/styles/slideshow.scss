@@ -52,3 +52,26 @@
     font-weight: 600;
   }
 }
+
+/* Mobile : 320px → 767px */
+@media (max-width: 767px) {
+  .slideshow {
+    width: 100%;
+    height: 225px;
+    border-radius: 10px;
+
+    .slideshow-image {
+      width: 100%;
+      height: 225px;
+      border-radius: 10px;
+    }
+
+    .arrow {
+      font-size: 2rem;
+    }
+
+    .counter {
+      font-size: 0.9rem;
+    }
+  }
+}

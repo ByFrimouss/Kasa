@@ -1,11 +1,8 @@
 @use "sass:color";
 
-// Variables de base
-$color-primary: #000000;
+$color-primary: #000;
 $color-secondary: #ff6060;
-$color-link: #646cff;
 
-// Header principal
 .header {
   width: 100%;
 
@@ -18,31 +15,65 @@ $color-link: #646cff;
     align-items: center;
   }
 
+  /* =========================
+     LOGO
+  ========================= */
   .logo {
-    font-size: 2rem;
-    font-weight: bold;
+    display: flex;
+    align-items: center;
+
+    img {
+      height: 68px;
+      width: auto;
+    }
   }
 
+  /* =========================
+     NAVIGATION
+  ========================= */
   .nav {
     ul {
       display: flex;
       list-style: none;
       margin: 0;
       padding: 0;
+      gap: 3rem;
 
       li {
-        margin-left: 2rem;
-
         a {
           color: $color-primary;
           text-decoration: none;
           font-size: 24px;
           font-weight: 500;
-          transition: color 0.3s;
 
           &.active {
-            border-bottom: 1.5px solid $color-primary;
+            text-decoration: underline;
+            text-underline-offset: 6px;
           }
+        }
+      }
+    }
+  }
+}
+
+/* Mobile : 320px → 767px */
+@media (max-width: 768px) {
+  .header {
+    &__container {
+      padding: 1.2rem 16px;
+    }
+
+    .logo img {
+      height: 38px;
+    }
+
+    .nav {
+      ul {
+        gap: 1.5rem;
+
+        li a {
+          font-size: 10px;
+          text-transform: uppercase;
         }
       }
     }

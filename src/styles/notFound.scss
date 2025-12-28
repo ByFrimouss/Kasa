@@ -26,3 +26,18 @@
   text-decoration: underline;
   font-weight: 500;
 }
+
+/* Mobile : 320px → 767px */
+@media (max-width: 767px) {
+  .notfound-title {
+    font-size: 4rem;
+  }
+
+  .notfound-text {
+    font-size: 1.1rem;
+  }
+
+  .notfound-button {
+    margin: 40px 0;
+  }
+}
