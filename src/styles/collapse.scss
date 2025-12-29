@@ -1,6 +1,6 @@
 .about-container {
   max-width: 1023px;
-  margin: 0 auto;
+  margin: 80px auto;
   padding: 0 20px;
 }
 
@@ -53,6 +53,11 @@
 
 /* Mobile : 320px → 767px */
 @media (max-width: 767px) {
+  .about-container {
+    padding: 0 10px;
+    margin: 50px auto;
+  }
+
   .collapse-header h3 {
     font-size: 0.8rem;
   }

@@ -37,92 +37,104 @@
     flex-wrap: wrap;
     gap: 10px;
     margin-top: 20px;
-  }
-}
 
-.tag {
-  background-color: #ff6060;
-  color: white;
-  padding: 5px 20px;
-  border-radius: 10px;
-  font-size: 14px;
-  font-weight: 500;
-}
-
-/* =========================
-   HOST + RATING
-========================= */
-.logement__host {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-end;
-  justify-content: space-between;
-}
-
-.host {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-
-  &__name {
-    color: #ff6060;
-    font-size: 18px;
-    text-align: right;
-    max-width: 100px;
+    .tag {
+      background-color: #ff6060;
+      color: white;
+      padding: 5px 20px;
+      border-radius: 10px;
+      font-size: 14px;
+      font-weight: 500;
+    }
   }
 
-  &__picture {
-    width: 64px;
-    height: 64px;
-    border-radius: 50%;
-    object-fit: cover;
+  /* =========================
+     HOST + RATING
+  ========================= */
+  &__host {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: space-between;
+
+    .host {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+
+      &__name {
+        color: #ff6060;
+        font-size: 18px;
+        text-align: right;
+        max-width: 100px;
+      }
+
+      &__picture {
+        width: 64px;
+        height: 64px;
+        border-radius: 50%;
+        object-fit: cover;
+      }
+    }
   }
-}
 
-/* =========================
-   RATING
-========================= */
-.rating {
-  display: flex;
-  gap: 5px;
-  margin-top: 15px;
-}
+  /* =========================
+     RATING
+  ========================= */
+  .rating {
+    display: flex;
+    gap: 5px;
+    margin-top: 15px;
 
-.star {
-  font-size: 24px;
-  color: #e3e3e3;
+    .star {
+      font-size: 24px;
+      color: #e3e3e3;
 
-  &--active {
-    color: #ff6060;
+      &--active {
+        color: #ff6060;
+      }
+    }
   }
-}
 
-/* =========================
-   COLLAPSES
-========================= */
-.logement__collapses {
-  display: flex;
-  gap: 40px;
-  margin-top: 30px;
+  /* =========================
+     COLLAPSES
+  ========================= */
+  &__collapses {
+    display: flex;
+    gap: 40px;
+    margin-top: 30px;
 
-  > .collapse {
-    flex: 1;
+    > .collapse {
+      flex: 1;
+
+      .collapse-header {
+        h3 {
+          font-size: 16px; // taille par défaut
+        }
+      }
+
+      .collapse-arrow {
+        width: 24px;
+
+        &.open {
+          width: 24px;
+        }
+      }
+    }
   }
-}
 
-.equipments {
-  list-style: none;
-  padding: 0;
-  margin: 0;
+  .equipments {
+    list-style: none;
+    padding: 0;
+    margin: 0;
 
-  li {
-    margin-bottom: 5px;
+    li {
+      margin-bottom: 5px;
+    }
   }
-}
 
-/* Mobile : 320px → 767px */
-@media (max-width: 768px) {
-  .logement {
+  /* Mobile : 320px → 767px */
+  @media (max-width: 767px) {
     &__header {
       flex-direction: column;
       margin-top: 15px;
@@ -139,49 +151,60 @@
 
     &__tags {
       margin-top: 0;
+
+      .tag {
+        padding: 5px 15px;
+        font-size: 8px;
+        font-weight: 600;
+        border-radius: 5px;
+      }
     }
 
-    .tag {
-      padding: 5px 15px;
-      font-size: 8px;
-      font-weight: 600;
-      border-radius: 5px;
-    }
-  }
+    &__host {
+      flex-direction: row-reverse;
+      align-items: center;
 
-  .logement__host {
-    flex-direction: row-reverse;
-    align-items: center;
-  }
+      .host {
+        &__name {
+          font-size: 14px;
+        }
 
-  .host {
-    &__name {
-      font-size: 14px;
+        &__picture {
+          width: 36px;
+          height: 36px;
+        }
+      }
     }
 
-    &__picture {
-      width: 36px;
-      height: 36px;
+    .rating {
+      margin-top: 0;
+      gap: 0;
+
+      .star {
+        font-size: 18px;
+      }
     }
-  }
 
-  .rating {
-    margin-top: 0;
-    gap: 0;
-  }
+    &__collapses {
+      flex-direction: column;
+      gap: 0;
+      margin-top: 15px;
 
-  .logement__collapses {
-    flex-direction: column;
-    gap: 0;
-    margin-top: 15px;
-  }
+      > .collapse {
+        .collapse-header {
+          h3 {
+            font-size: 12px;
+          }
+        }
 
-  .collapse-header h3 {
-    font-size: 12px;
-  }
+        .collapse-arrow {
+          width: 20px;
 
-  .collapse-arrow.open,
-  .collapse-arrow {
-    width: 20px;
+          &.open {
+            width: 20px;
+          }
+        }
+      }
+    }
   }
 }

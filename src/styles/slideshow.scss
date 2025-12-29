@@ -5,15 +5,16 @@
 
 .slideshow {
   position: relative;
-  width: 1240px;
+  width: 100%;
+  max-width: 1240px;
   height: 415px;
   margin: 0 auto;
   overflow: hidden;
   border-radius: 25px;
 
   .slideshow-image {
-    width: 1240px;
-    height: 415px;
+    width: 100%;
+    height: 100%;
     object-fit: cover;
     object-position: center center;
     display: block;

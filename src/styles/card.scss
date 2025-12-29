@@ -40,7 +40,7 @@
     border-radius: 5px;
     background: rgba(0, 0, 0, 0.25);
     backdrop-filter: blur(2px);
-    -webkit-backdrop-filter: blur(4px); // Safari
+    -webkit-backdrop-filter: blur(4px);
   }
 }
 
@@ -63,8 +63,31 @@
     }
 
     h2 {
-      font-size: 14px;
+      font-size: 12px;
       padding: 4px 8px;
+    }
+  }
+}
+
+/* Tablette : 768px → 1024px */
+@media (min-width: 768px) and (max-width: 1024px) {
+  .card-container {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+    padding: 30px 20px;
+  }
+
+  .card {
+    width: 100%;
+    height: auto;
+
+    img {
+      height: auto;
+    }
+
+    h2 {
+      font-size: 12px;
+      padding: 5px 8px;
     }
   }
 }
