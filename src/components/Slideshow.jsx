@@ -1,5 +1,11 @@
-import { useState } from "react";
+// CARROUSEL D'IMAGES POUR UN LOGEMENT
+
+import { useState } from "react"; // Hook useState pour gérer l'état local du composant
 import "../styles/slideshow.scss";
+
+// Composant Slideshow
+// Affiche une image à la fois et permet de naviguer entre les images avec des flèches
+// Montre également un compteur de position (ex: 2/5)
 
 function Slideshow({ images }) {
   const [current, setCurrent] = useState(0);

@@ -1,5 +1,11 @@
+// BARRE DE NAVIGATION PRINCIPALE
+
 import { NavLink } from "react-router-dom";
 import logo from "../assets/LOGO-header.png";
+
+// Composant Header
+// Présente le logo et les liens vers les pages principales
+// Utilisé sur toutes les pages via le composant Layout
 
 function Header() {
   return (

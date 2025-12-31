@@ -1,7 +1,14 @@
+// AFFICHE LE DÉTAIL D'UN LOGEMENT SÉLECTIONNÉ
+
+// useParams : permet de récupérer l'id depuis l'URL
+// Navigate : permet de rediriger vers une autre page
 import { useParams, Navigate } from "react-router-dom";
 import Slideshow from "../components/Slideshow";
 import Collapse from "../components/Collapse";
 import "../styles/logement.scss";
+
+// Page Logement
+// Cette page est accessible via une route dynamique basée sur l'id du logement
 
 function Logement({ logements }) {
   const { id } = useParams();

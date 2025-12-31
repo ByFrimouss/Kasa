@@ -1,6 +1,10 @@
+// Page "À propos" de l'application
 import Banner from "../components/Banner";
 import Collapse from "../components/Collapse";
 import bannerAbout from "../assets/img-banner-about.png";
+
+// Page About
+// Présente les valeurs de Kasa à l'aide d'une bannière et de plusieurs sections repliables (Collapse)
 
 function About() {
   return (

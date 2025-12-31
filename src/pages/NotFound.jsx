@@ -1,5 +1,10 @@
+// Page d'erreur 404
+
 import { Link } from "react-router-dom";
 import "../styles/notFound.scss";
+
+// Page NotFound
+// Affichée lorsque l'utilisateur tente d'accéder à une route inexistante
 
 function NotFound() {
   return (
